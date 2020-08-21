@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    Meu país de origem é: <input type="text" name="txtu" id="txtu">
+    <input type="button" value="verificar" onclick="txtna()">
+    <div id="res">
+
+    </div>
+    <script>
+        function txtna() {
+            var país = document.querySelector('input#txtu')
+            var res = document.querySelector('div#res')
+            var ps = (país.value)
+            res.innerHTML = `<p>Vivendo em <strong>${ps}</strong></p>`
+            if (ps == 'Brasil') {
+                res.innerHTML += "<p>Sua nacionalidade é <strong>Brasileiro!</strong></p>"
+            } else {
+                res.innerHTML += "<p>Sua nacionalidade é <strong>estrangeiro!</strong></p>"
+            }
+        }
+    </script>
+</body>
+</html>
